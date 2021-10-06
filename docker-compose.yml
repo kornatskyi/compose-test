@@ -1,0 +1,14 @@
+version: "3.9"
+services:
+  api:
+    build: ./express-app
+    volumes:
+      - ./express-app:/code
+    ports:
+      - "3001:3001"
+  frontend:
+    build: ./react-app
+    volumes:
+      - ./react-app:/code
+    ports:
+      - "3000:3000"
